@@ -24,6 +24,6 @@ def avg(request):
     # ↓辞書型の値(value)を取り出す方法
     for book_avg_price in books_avg_price.values():
         context = {
-            "book_avg_price": book_avg_price
+            "book_avg_price": round(book_avg_price)
         }
     return render(request, "main.html", context)
