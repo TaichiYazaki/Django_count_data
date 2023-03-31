@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from count_data.models import Book
+from count_data.models import Book, Review
 
 # Create your views here.
 
@@ -10,6 +10,10 @@ def index(request):
 
 
 def count(request):
-    count = Book.objects.count()
-    context = {"count": count}
+    book_count = Book.objects.count()
+    review_count = Review.objects.count()
+    context = {
+        "book_count": book_count,
+        "review_count": review_count
+    }
     return render(request, "main.html", context)

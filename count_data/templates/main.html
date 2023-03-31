@@ -13,7 +13,11 @@
         {% csrf_token %}
         <button type="submit">count</button>
     </form>
-    <p>{{ count }}</p>
+    <p>本の個数</p>
+    <p>{{ book_count }}</p>
+    <p>----------------</p>
+    <p>レビューの件数</p>
+    <p>{{ review_count }}</p>
 </body>
 
 </html>
