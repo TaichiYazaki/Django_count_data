@@ -18,6 +18,13 @@
     <p>----------------</p>
     <p>レビューの件数</p>
     <p>{{ review_count }}</p>
+
+    <form action="/avg" method="post">
+        {% csrf_token %}
+        <button type="submit">avg</button>
+    </form>
+    <p>本の価格平均</p>
+    <p>{{ book_avg_price }}</p>
 </body>
 
 </html>
